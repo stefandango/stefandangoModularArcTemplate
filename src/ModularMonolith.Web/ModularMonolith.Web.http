@@ -1,0 +1,5 @@
+@ModularMonolith.Web_HostAddress = http://localhost:5294
+
+GET {{ModularMonolith.Web_HostAddress}}/module1
+Accept: application/json
+###
