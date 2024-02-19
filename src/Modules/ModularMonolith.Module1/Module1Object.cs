@@ -7,7 +7,7 @@ internal class  Module1Object
     public Guid Id { get; private set; }
     public string Name { get; private set; } = string.Empty;
 
-    public int Value { get; private set; } 
+    public int Value { get; private set; }
 
     internal Module1Object(Guid id, string name, int value)
     {
