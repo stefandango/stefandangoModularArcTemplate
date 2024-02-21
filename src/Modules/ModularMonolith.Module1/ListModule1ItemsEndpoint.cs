@@ -14,7 +14,7 @@ internal class ListModule1ItemsEndpoint(IModule1Service service) : EndpointWitho
 
     public override async Task HandleAsync(CancellationToken cancellationToken = default)
     {
-        var items = _moduleService.ListModule1Items();
+        var items = await _moduleService.ListModule1ItemsAsync();
 
         await SendAsync(new ListModule1Response()
         {

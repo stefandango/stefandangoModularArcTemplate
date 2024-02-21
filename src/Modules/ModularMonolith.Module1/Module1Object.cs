@@ -4,9 +4,9 @@ namespace ModularMonolith.Module1;
 
 internal interface IModule1ObjectRepository : IReadOnlyModule1ObjectRepository
 {
-    Task CreateAsync(string name, int value);
+    Task CreateAsync(Module1Object module1Object);
     Task UpdateNameAsync(Guid id, string name);
-    Task DeleteAsync(Guid id);
+    Task DeleteAsync(Module1Object module1Object);
     Task SaveChangesAsync();
 }
 
