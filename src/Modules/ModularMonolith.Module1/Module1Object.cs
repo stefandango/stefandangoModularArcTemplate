@@ -2,26 +2,12 @@ using Ardalis.GuardClauses;
 
 namespace ModularMonolith.Module1;
 
-internal interface IModule1ObjectRepository : IReadOnlyModule1ObjectRepository
-{
-    Task CreateAsync(Module1Object module1Object);
-    Task UpdateNameAsync(Guid id, string name);
-    Task DeleteAsync(Module1Object module1Object);
-    Task SaveChangesAsync();
-}
-
-internal interface IReadOnlyModule1ObjectRepository
-{
-    Task<Module1Object?> GetAsync(Guid id);
-    Task<List<Module1Object>> ListAsync();
-}
-
 internal class  Module1Object
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; } = string.Empty;
-
     public int Value { get; private set; }
+
 
     internal Module1Object(Guid id, string name, int value)
     {

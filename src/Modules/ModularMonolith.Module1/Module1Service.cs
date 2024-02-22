@@ -34,7 +34,6 @@ internal class Module1Service : IModule1Service
         var module1Object = await _module1Repository.GetAsync(id);
 
         await _module1Repository.UpdateNameAsync(id, name);
-        await _module1Repository.SaveChangesAsync();
     }
 
     public async Task DeleteModule1ItemAsync(Guid id)
