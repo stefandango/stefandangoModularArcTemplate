@@ -2,4 +2,5 @@
 
 My modular monolith template (just playing around a bit)
 
+Important stuff is module structure and intermodule communication...
 
