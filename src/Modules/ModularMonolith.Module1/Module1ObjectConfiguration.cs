@@ -14,8 +14,8 @@ internal class Module1ObjectConfiguration : IEntityTypeConfiguration<Module1Obje
     private IEnumerable<Module1Object> GetSeedData()
     {
         Random random = new Random();
-        yield return new Module1Object ( Guid.NewGuid(), "Object1", random.Next(1, 100));
-        yield return new Module1Object ( Guid.NewGuid(), "Object2", random.Next(1, 100));
-        yield return new Module1Object ( Guid.NewGuid(), "Object3", random.Next(1, 100));
+        yield return new Module1Object ( Guid.NewGuid(), "Object_1", random.Next(1, 100));
+        yield return new Module1Object ( Guid.NewGuid(), "Object_2", random.Next(1, 100));
+        yield return new Module1Object ( Guid.NewGuid(), "Object_3", random.Next(1, 100));
     }
 }

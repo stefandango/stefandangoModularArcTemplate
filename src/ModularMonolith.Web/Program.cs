@@ -10,7 +10,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddFastEndpoints();
 
 // Add module services
-builder.Services.AddModule1Services();
+builder.Services.AddModule1Services(builder.Configuration);
 
 var app = builder.Build();
 

@@ -1,5 +1,50 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace ModularMonolith.Module1;
 
+
+internal class EfModule1Repository : IModule1ObjectRepository
+{
+    private readonly Module1ObjectDbContext _dbContext;
+
+    public EfModule1Repository(Module1ObjectDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    public async Task<Module1Object?> GetAsync(Guid id)
+    {
+        return await _dbContext.Module1Objects.FindAsync(id);
+    }
+
+    public async Task<List<Module1Object>> ListAsync()
+    {
+        return await _dbContext.Module1Objects.ToListAsync();
+    }
+
+    public Task CreateAsync(Module1Object module1Object)
+    {
+        _dbContext.AddAsync(module1Object);
+        return Task.CompletedTask;
+    }
+
+    public async Task UpdateNameAsync(Guid id, string name)
+    {
+        var module = await _dbContext.Module1Objects.FindAsync(id);
+        module!.UpdateName(name);
+    }
+
+    public Task DeleteAsync(Module1Object module1Object)
+    {
+        _dbContext.Remove(module1Object);
+        return Task.CompletedTask;
+    }
+
+    public async  Task SaveChangesAsync()
+    {
+        await _dbContext.SaveChangesAsync();
+    }
+}
 internal class Module1Service : IModule1Service
 {
     private readonly IModule1ObjectRepository _module1Repository;

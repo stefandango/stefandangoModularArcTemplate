@@ -3,9 +3,9 @@ using System.Reflection;
 
 namespace ModularMonolith.Module1;
 
-public class Module1ObjectContext : DbContext
+public class Module1ObjectDbContext : DbContext
 {
-    public Module1ObjectContext(DbContextOptions<Module1ObjectContext> options) : base(options) { }
+    public Module1ObjectDbContext(DbContextOptions<Module1ObjectDbContext> options) : base(options) { }
     internal DbSet<Module1Object> Module1Objects { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
