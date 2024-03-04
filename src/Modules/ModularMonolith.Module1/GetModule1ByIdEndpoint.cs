@@ -4,7 +4,6 @@ namespace ModularMonolith.Module1;
 
 internal class GetModule1ByIdEndpoint(IModule1Service service) : Endpoint<GetModule1ByIdRequest, Module1Dto>
 {
-    public readonly IModule1Service _moduleService = service;
     public override void Configure()
     {
         Get("/module1/{Id}");
@@ -12,7 +11,7 @@ internal class GetModule1ByIdEndpoint(IModule1Service service) : Endpoint<GetMod
     }
     public override async Task HandleAsync(GetModule1ByIdRequest request, CancellationToken cancellationToken = default)
     {
-        var item = await _moduleService.GetModule1ItemAsync(request.Id);
+        var item = await service.GetModule1ItemAsync(request.Id);
         if (item == null)
         {
             await SendNotFoundAsync();

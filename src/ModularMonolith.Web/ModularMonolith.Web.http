@@ -3,3 +3,9 @@
 GET {{ModularMonolith.Web_HostAddress}}/module1
 Accept: application/json
 ###
+
+@ModuleId=04069dc5-c48e-4171-8828-32dd98b074b0
+GET {{ModularMonolith.Web_HostAddress}}/module1/{{ModuleId}}
+Accept: application/json
+
+###
