@@ -9,3 +9,12 @@ GET {{ModularMonolith.Web_HostAddress}}/module1/{{ModuleId}}
 Accept: application/json
 
 ###
+
+POST {{ModularMonolith.Web_HostAddress}}/module1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Name": "HELLO",
+  "Value": 52
+}
