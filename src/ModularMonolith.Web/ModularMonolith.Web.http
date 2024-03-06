@@ -15,6 +15,14 @@ Accept: application/json
 Content-Type: application/json
 
 {
+  "Id": "30f8e749-6234-4483-b5a1-cdddb30884c5",
   "Name": "HELLO",
   "Value": 52
 }
+
+###
+
+DELETE {{ModularMonolith.Web_HostAddress}}/module1/30f8e749-6234-4483-b5a1-cdddb30884c5
+Accept: application/json
+
+###

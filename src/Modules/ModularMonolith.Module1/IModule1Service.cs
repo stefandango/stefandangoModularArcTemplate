@@ -6,5 +6,6 @@ internal interface IModule1Service
     Task<Module1Dto?> GetModule1ItemAsync(Guid id);
     Task CreateModule1ItemAsync(Module1Dto module1Dto);
     Task UpdateModule1ItemNameAsync(Guid id, string name);
+    Task UpdateModule1ItemValueAsync(Guid id, int value);
     Task DeleteModule1ItemAsync(Guid id);
 }

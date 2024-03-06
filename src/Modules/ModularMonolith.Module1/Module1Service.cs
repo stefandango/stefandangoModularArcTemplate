@@ -34,6 +34,12 @@ internal class EfModule1Repository : IModule1ObjectRepository
         module!.UpdateName(name);
     }
 
+    public async Task UpdateValueAsync(Guid id, int value)
+    {
+        var module = await _dbContext.Module1Objects.FindAsync(id);
+        module!.UpdateValue(value);
+    }
+
     public Task DeleteAsync(Module1Object module1Object)
     {
         _dbContext.Remove(module1Object);
@@ -79,6 +85,14 @@ internal class Module1Service : IModule1Service
         var module1Object = await _module1Repository.GetAsync(id);
 
         await _module1Repository.UpdateNameAsync(id, name);
+    }
+
+    public async Task UpdateModule1ItemValueAsync(Guid id, int value)
+    {
+        var module1Object = await _module1Repository.GetAsync(id);
+
+        await _module1Repository.UpdateValueAsync(id, value);
+        await _module1Repository.SaveChangesAsync();
     }
 
     public async Task DeleteModule1ItemAsync(Guid id)

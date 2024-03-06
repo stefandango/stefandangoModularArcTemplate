@@ -21,4 +21,9 @@ internal class  Module1Object
         Name = Guard.Against.NullOrEmpty(name);
     }
 
+    internal void UpdateValue(int value)
+    {
+        Value = Guard.Against.Negative(value);
+    }
+
 }
