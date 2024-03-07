@@ -1,4 +1,4 @@
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Endpoints;
 
 public class ListModule1Response
 {

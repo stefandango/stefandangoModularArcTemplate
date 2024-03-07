@@ -1,8 +1,8 @@
 using FastEndpoints;
 
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Endpoints;
 
-internal class GetModule1ByIdEndpoint(IModule1Service service) : Endpoint<GetModule1ByIdRequest, Module1Dto>
+internal class GetById(IModule1Service service) : Endpoint<GetModule1ByIdRequest, Module1Dto>
 {
     public override void Configure()
     {

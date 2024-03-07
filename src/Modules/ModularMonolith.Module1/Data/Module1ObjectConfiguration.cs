@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Data;
 
 internal class Module1ObjectConfiguration : IEntityTypeConfiguration<Module1Object>
 {

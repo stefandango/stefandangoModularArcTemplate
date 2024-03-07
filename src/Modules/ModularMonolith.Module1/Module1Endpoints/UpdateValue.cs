@@ -1,6 +1,6 @@
 using FastEndpoints;
 
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Endpoints;
 
 public class UpdateValueRequest
 {
@@ -8,11 +8,11 @@ public class UpdateValueRequest
     public int Value {get;set;}
 }
 
-internal class UpdateValueEndpoint(IModule1Service service) : Endpoint<UpdateValueRequest>
+internal class UpdateValue(IModule1Service service) : Endpoint<UpdateValueRequest>
 {
     private readonly IModule1Service _moduleService = service;
     public override void Configure()
-    {Q
+    {
         Post("/module1/{id}/valuehistory");
         AllowAnonymous();
     }

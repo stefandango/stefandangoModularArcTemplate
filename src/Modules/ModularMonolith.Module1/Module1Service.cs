@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+using ModularMonolith.Module1.Data;
+
 namespace ModularMonolith.Module1;
 
 

@@ -1,8 +1,8 @@
 using FastEndpoints;
 
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Endpoints;
 
-internal class DeleteModule1Endpoint(IModule1Service service) : Endpoint<DeleteModule1Request>
+internal class Delete(IModule1Service service) : Endpoint<DeleteModule1Request>
 {
     public readonly IModule1Service _moduleService = service;
     public override void Configure()

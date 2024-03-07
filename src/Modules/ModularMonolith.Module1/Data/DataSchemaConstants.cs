@@ -1,4 +1,4 @@
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Data;
 
 public static class DataSchemaConstants
 {

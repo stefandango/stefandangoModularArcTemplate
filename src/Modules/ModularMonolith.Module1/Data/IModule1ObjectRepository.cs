@@ -1,4 +1,4 @@
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Data;
 
 internal interface IModule1ObjectRepository : IReadOnlyModule1ObjectRepository
 {

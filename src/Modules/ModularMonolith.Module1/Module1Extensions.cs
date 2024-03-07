@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 
+using ModularMonolith.Module1.Data;
+
 namespace ModularMonolith.Module1;
 
 public static class Module1Extensions

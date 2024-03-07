@@ -1,8 +1,8 @@
 ﻿using FastEndpoints;
 
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Endpoints;
 
-internal class ListModule1ItemsEndpoint(IModule1Service service) : EndpointWithoutRequest<ListModule1Response>
+internal class List(IModule1Service service) : EndpointWithoutRequest<ListModule1Response>
 {
     public readonly IModule1Service _moduleService = service;
 

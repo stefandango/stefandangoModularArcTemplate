@@ -1,8 +1,8 @@
 using FastEndpoints;
 
-namespace ModularMonolith.Module1;
+namespace ModularMonolith.Module1.Endpoints;
 
-internal class CreateModule1Endpoint(IModule1Service service) : Endpoint<CreateModule1Request, Module1Dto>
+internal class Create(IModule1Service service) : Endpoint<CreateModule1Request, Module1Dto>
 {
     public override void Configure()
     {
@@ -13,6 +13,6 @@ internal class CreateModule1Endpoint(IModule1Service service) : Endpoint<CreateM
     {
         var newObject1 = new Module1Dto(request.Id ?? Guid.NewGuid(), request.Name, request.Value);
         await service.CreateModule1ItemAsync(newObject1);
-        await SendCreatedAtAsync<GetModule1ByIdEndpoint>(new {newObject1.Id}, newObject1, cancellation: cancellationToken);
+        await SendCreatedAtAsync<GetById>(new {newObject1.Id}, newObject1, cancellation: cancellationToken);
     }
 }

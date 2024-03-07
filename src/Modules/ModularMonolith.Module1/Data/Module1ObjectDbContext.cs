@@ -1,7 +1,8 @@
-using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace ModularMonolith.Module1;
+using Microsoft.EntityFrameworkCore;
+
+namespace ModularMonolith.Module1.Data;
 
 public class Module1ObjectDbContext : DbContext
 {
