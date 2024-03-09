@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Module1", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4CA2AF2F-D2E9-4774-9855-1587A409D1EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Module1.Tests", "tests\ModularMonolith.Module1.Tests\ModularMonolith.Module1.Tests.csproj", "{140D2C58-2E5E-41DA-A91D-E6BE9C0FDA0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D9FD2B1-1E7D-4863-BAB4-3E047D9F858D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9FD2B1-1E7D-4863-BAB4-3E047D9F858D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9FD2B1-1E7D-4863-BAB4-3E047D9F858D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{140D2C58-2E5E-41DA-A91D-E6BE9C0FDA0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{140D2C58-2E5E-41DA-A91D-E6BE9C0FDA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{140D2C58-2E5E-41DA-A91D-E6BE9C0FDA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{140D2C58-2E5E-41DA-A91D-E6BE9C0FDA0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,5 +41,6 @@ Global
 		{593A6AD4-28A1-4BFC-ABF5-49B2EA615659} = {D9D8BC2A-C4FB-4B2D-AA3E-FFF4198F6DCA}
 		{D3EF0793-3D8B-4C02-B7A2-08582A53F4F5} = {D9D8BC2A-C4FB-4B2D-AA3E-FFF4198F6DCA}
 		{4D9FD2B1-1E7D-4863-BAB4-3E047D9F858D} = {D3EF0793-3D8B-4C02-B7A2-08582A53F4F5}
+		{140D2C58-2E5E-41DA-A91D-E6BE9C0FDA0D} = {4CA2AF2F-D2E9-4774-9855-1587A409D1EE}
 	EndGlobalSection
 EndGlobal
