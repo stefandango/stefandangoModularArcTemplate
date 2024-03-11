@@ -1,11 +1,28 @@
 using FastEndpoints;
 
+using FluentValidation;
+
 namespace ModularMonolith.Module1.Endpoints;
 
 public class UpdateValueRequest
 {
     public Guid Id {get; set;}
     public int Value {get;set;}
+}
+
+public class UpdateValueRequestValidator : Validator<UpdateValueRequest>
+{
+    public UpdateValueRequestValidator()
+    {
+        RuleFor(x => x.Id)
+            .NotNull()
+            .NotEqual(Guid.Empty)
+            .WithMessage("A Valid module is required");
+
+        RuleFor(x => x.Value)
+            .GreaterThanOrEqualTo(0)
+            .WithMessage("Value cannot be a negative value");
+    }
 }
 
 internal class UpdateValue(IModule1Service service) : Endpoint<UpdateValueRequest>

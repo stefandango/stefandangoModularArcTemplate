@@ -26,6 +26,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\ModularMonolith.Web\ModularMonolith.Web.csproj" />
+      <ProjectReference Include="..\..\src\Modules\Module1\ModularMonolith.Module1\ModularMonolith.Module1.csproj" />
     </ItemGroup>
 
 </Project>

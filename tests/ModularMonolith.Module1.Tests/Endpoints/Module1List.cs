@@ -25,4 +25,5 @@ public class Module1List (Fixture fixture, ITestOutputHelper outputHelper) : Tes
         testResult.Response.EnsureSuccessStatusCode();
         testResult.Result.Items.Count.Should().Be(3);
     }
+
 }
