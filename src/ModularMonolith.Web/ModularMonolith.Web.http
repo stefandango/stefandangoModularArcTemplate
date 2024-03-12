@@ -26,3 +26,12 @@ DELETE {{ModularMonolith.Web_HostAddress}}/module1/30f8e749-6234-4483-b5a1-cdddb
 Accept: application/json
 
 ###
+
+POST {{ModularMonolith.Web_HostAddress}}/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "test@test.test",
+  "password": "testtest"
+}

@@ -10,7 +10,7 @@ public class UsersDbContext : IdentityDbContext
     public UsersDbContext(DbContextOptions<UsersDbContext> options) : base(options)
     { }
     
-    public DbSet<ApplicationUser>? ApplicationUser { get; set; }
+    public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

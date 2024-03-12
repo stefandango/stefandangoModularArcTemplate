@@ -11,9 +11,10 @@ public static class UsersModuleExtensions
     public static IServiceCollection AddUserModuleServices(this IServiceCollection services,
         ConfigurationManager config, ILogger logger)
     {
-        string? connectionString = config.GetConnectionString("UserDb");
+        string? connectionString = config.GetConnectionString("UsersConnectionString");
         services.AddDbContext<UsersDbContext>(config 
             => config.UseSqlServer(connectionString));
+        
 
         services.AddIdentityCore<ApplicationUser>()
             .AddEntityFrameworkStores<UsersDbContext>();
