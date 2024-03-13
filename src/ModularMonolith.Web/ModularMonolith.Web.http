@@ -33,5 +33,19 @@ Content-Type: application/json
 
 {
   "email": "test@test.test",
-  "password": "testtest"
+  "password": "Testtest1@"
 }
+
+###
+
+POST {{ModularMonolith.Web_HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+"email": "test@test.test",
+"password": "Testtest1@"
+}
+###
+
+@token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJ0ZXN0QHRlc3QudGVzdCIsImlhdCI6MTcxMDM2MjY0OCwiZXhwIjoxNzEwMzY2MjQ4LCJuYmYiOjE3MTAzNjI2NDh9.ZSDqrKY7MOun7OCLtGciqbNlCyqAzPuHddWTsjGYwFI
