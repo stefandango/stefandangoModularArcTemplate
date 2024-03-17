@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using ModularMonolith.Users.Data;
+using ModularMonolith.Users.UseCases;
+
 using Serilog;
 
 namespace ModularMonolith.Users;
@@ -20,6 +23,9 @@ public static class UsersModuleExtensions
 
         services.AddIdentityCore<ApplicationUser>()
             .AddEntityFrameworkStores<UsersDbContext>();
+        
+        // Add user services
+        services.AddScoped<IApplicationUserRepository, EfApplicationUserRepository>();
         
         mediatRAssemblies.Add(typeof(UsersModuleExtensions).Assembly);
         

@@ -48,4 +48,23 @@ Content-Type: application/json
 }
 ###
 
-@token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJ0ZXN0QHRlc3QudGVzdCIsImlhdCI6MTcxMDM2MjY0OCwiZXhwIjoxNzEwMzY2MjQ4LCJuYmYiOjE3MTAzNjI2NDh9.ZSDqrKY7MOun7OCLtGciqbNlCyqAzPuHddWTsjGYwFI
+@token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJ0ZXN0QHRlc3QudGVzdCIsImlhdCI6MTcxMDY2NDg3OCwiZXhwIjoxNzEwNjY4NDc4LCJuYmYiOjE3MTA2NjQ4Nzh9.6bo7t9HHCRNH6heb5v_OY-ujc2Y6cbPfAwj5NNheM58
+
+POST {{ModularMonolith.Web_HostAddress}}/cart
+Accept: text/plain
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "module1Id": "04069dc5-c48e-4171-8828-32dd98b074b0",
+  "name": "Test",
+  "value": 1
+}
+
+###
+
+GET {{ModularMonolith.Web_HostAddress}}/cart
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###

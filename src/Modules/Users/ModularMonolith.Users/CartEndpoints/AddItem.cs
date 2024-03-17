@@ -10,7 +10,7 @@ using ModularMonolith.Users.UseCases;
 
 namespace ModularMonolith.Users.CartEndpoints;
 
-public class AddItem : Endpoint<AddCartItemRequest>
+internal class AddItem : Endpoint<AddCartItemRequest>
 {
     private readonly IMediator _mediator;
     public AddItem(IMediator mediator)
@@ -27,7 +27,7 @@ public class AddItem : Endpoint<AddCartItemRequest>
     {
         var emailAddress = User.FindFirstValue("EmailAddress");
 
-        var command = new AddItemToCardCommand(req.Module1Id, req.Value, emailAddress!);
+        var command = new AddItemToCardCommand(req.Module1Id, req.Name, req.Value, emailAddress!);
 
         var result = await _mediator.Send(command, ct);
 
