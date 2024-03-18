@@ -17,4 +17,12 @@
       <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Contracts\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Module1\ModularMonolith.Module1.Contracts\ModularMonolith.Module1.Contracts.csproj" />
+    </ItemGroup>
+
 </Project>

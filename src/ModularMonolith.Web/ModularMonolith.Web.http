@@ -48,7 +48,7 @@ Content-Type: application/json
 }
 ###
 
-@token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJ0ZXN0QHRlc3QudGVzdCIsImlhdCI6MTcxMDY2NDg3OCwiZXhwIjoxNzEwNjY4NDc4LCJuYmYiOjE3MTA2NjQ4Nzh9.6bo7t9HHCRNH6heb5v_OY-ujc2Y6cbPfAwj5NNheM58
+@token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJ0ZXN0QHRlc3QudGVzdCIsImlhdCI6MTcxMDcwNzk3MSwiZXhwIjoxNzEwNzExNTcxLCJuYmYiOjE3MTA3MDc5NzF9.l1OWqSaaYpFV6Y3M0T4LFhPKP9d3dict48OMzMMFoao
 
 POST {{ModularMonolith.Web_HostAddress}}/cart
 Accept: text/plain
@@ -56,8 +56,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "module1Id": "04069dc5-c48e-4171-8828-32dd98b074b0",
-  "name": "Test",
+  "module1Id": "30f8e749-6234-4483-b5a1-cdddb30884c5",
   "value": 1
 }
 

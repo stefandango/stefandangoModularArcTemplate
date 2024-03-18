@@ -6,4 +6,4 @@ using ModularMonolith.Users.CartEndpoints;
 
 namespace ModularMonolith.Users.UseCases;
 
-public record AddItemToCardCommand(Guid Module1Id,string Name, int Value, string EmailAddress) : IRequest<Result>;
+public record AddItemToCardCommand(Guid Module1Id, int Value, string EmailAddress) : IRequest<Result>;

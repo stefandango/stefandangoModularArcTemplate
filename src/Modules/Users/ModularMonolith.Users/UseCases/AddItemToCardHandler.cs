@@ -2,14 +2,18 @@ using Ardalis.Result;
 
 using MediatR;
 
+using ModularMonolith.Module1.Contracts;
+
 namespace ModularMonolith.Users.UseCases;
 
 public class AddItemToCardHandler : IRequestHandler<AddItemToCardCommand, Result>
 {
     private readonly IApplicationUserRepository _userRepository;
-    public AddItemToCardHandler(IApplicationUserRepository userRepository)
+    private readonly IMediator _mediator;
+    public AddItemToCardHandler(IApplicationUserRepository userRepository, IMediator mediator)
     {
         _userRepository = userRepository;
+        _mediator = mediator;
     }
     public async Task<Result> Handle(AddItemToCardCommand request, CancellationToken cancellationToken)
     {
@@ -20,7 +24,17 @@ public class AddItemToCardHandler : IRequestHandler<AddItemToCardCommand, Result
             return Result.Unauthorized();
         }
 
-        var newCartItem = new CartItem(request.Module1Id, request.Name, request.Value);
+
+        var query = new Module1DetailsQuery(request.Module1Id);
+        var result = await _mediator.Send(query);
+        if (result.Status == ResultStatus.NotFound)
+        {
+            return Result.NotFound();
+        }
+
+        var module1Details = result.Value;
+
+        var newCartItem = new CartItem(request.Module1Id, module1Details.Name, request.Value);
         
         user.AddItemToCard(newCartItem);
 
