@@ -1,6 +1,7 @@
 # My Mondular Monolith Template...
 
-My modular monolith template (just playing around a bit)
+I've been following a tutorial about using modular monolith, this is a very rough version of just going along.
 
-Important stuff is module structure and intermodule communication...
+Bunch of stuff is very opinionated, which I dont necessarily agree with.
+
 
