@@ -4,4 +4,12 @@ I've been following a tutorial about using modular monolith, this is a very roug
 
 Bunch of stuff is very opinionated, which I dont necessarily agree with.
 
+Some of the stuff used:
+- Mediatr
+- FastEndpoints
+- EFCore
+- Ardalis.Result
+- Ardalis.GuardClauses
+
+
 
